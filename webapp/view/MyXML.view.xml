@@ -1,28 +1,28 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" 
-xmlns="sap.m" controllerName="chip.controller.MyXML"
- xmlns:mvc="sap.ui.core.mvc" >
+<mvc:View xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m" controllerName="chip.controller.MyXML" xmlns:mvc="sap.ui.core.mvc">
 
-<!-- <Input id="idInp" />
+    <!-- <Input id="idInp" />
 <Button id="idBtn" press="onBtnClick" 
 text="Click Me"
  icon="sap-icon://home"/> -->
 
 
-<form:SimpleForm title= "Employee Detaails" >
-    <form:title>
-        <core:Title icon="sap-icon://customer" text="Employee Details"></core:Title>
-    </form:title>
-<form:content >
-<Label text="Emp Id" ></Label>
-<Input id="idEmpId" width="20%"></Input>
-<Label text="Emp Name"></Label>
-<Input id="idEmpName" width="40%"></Input>
-<Label text="Salary" ></Label>
-<Input id="idEmpSal" width="30%"></Input>
-<Label text="Currency"></Label>
-<Input id="idCurr" width="15%"></Input>
-</form:content>
+    <form:SimpleForm editable="true">
+        <form:title>
+            <core:Title icon="sap-icon://customer" text="Employee Details"></core:Title>
+        </form:title>
+        <form:content>
+            <Label text="Emp Id"></Label>
+            <Input id="idEmpId" width="20%"></Input>
+            <Label text="Emp Name"></Label>
+            <Input id="idEmpName" width="40%"></Input>
+            <Label text="Salary"></Label>
+            <Input id="idEmpSal" width="30%"></Input>
+            <Label text="Currency"></Label>
+            <Input id="idCurr" width="15%"></Input>
+            <Label></Label>
+            <Button text="reload" press="onReload  "></Button>
+        </form:content>
 
 
-</form:SimpleForm>
+    </form:SimpleForm>
 </mvc:View>  
