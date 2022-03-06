@@ -14,13 +14,13 @@ text="Click Me"
     </form:title>
 <form:content >
 <Label text="Emp Id" ></Label>
-<Input id="idEmpId" ></Input>
+<Input id="idEmpId" width="20%"></Input>
 <Label text="Emp Name"></Label>
-<Input id="idEmpName"></Input>
+<Input id="idEmpName" width="40%"></Input>
 <Label text="Salary" ></Label>
-<Input id="idEmpSal"></Input>
+<Input id="idEmpSal" width="30%"></Input>
 <Label text="Currency"></Label>
-<Input id="idCurr" ></Input>
+<Input id="idCurr" width="15%"></Input>
 </form:content>
 
 
