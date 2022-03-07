@@ -15,8 +15,8 @@ sap.ui.define([
            //second model
            var oMode2=models.createJSONModel("model/mockdata/dataset.json")
            sap.ui.getCore().setModel(oMode2,"got");
-           var oXmlModel=models.createXMLModel("model/mockdata/mydemo.xml")
-           sap.ui.getCore().setModel(oXmlModel);
+        //    var oXmlModel=models.createXMLModel("model/mockdata/mydemo.xml")
+        //    sap.ui.getCore().setModel(oXmlModel);
            //binding syntax
            var Osalary=this.getView().byId("idEmpSal")
            Osalary.bindValue('/empStr/salary')
@@ -45,6 +45,13 @@ sap.ui.define([
             var oModel = sap.ui.getCore().getModel()
             var  oData=oModel.getProperty("/")
             console.log(oData);
+        },
+        onFlip:function () {
+           var oModel = sap.ui.getCore().getModel();
+           var oGOTModel= sap.ui.getCore().getModel("got") 
+           sap.ui.getCore().setModel(oGOTModel)
+           sap.ui.getCore().setModel(oModel,"got")
+
         }
     })
     

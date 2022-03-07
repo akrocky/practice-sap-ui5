@@ -22,8 +22,9 @@ text="Click Me"
             <Label></Label>
             <Button text="reload" press="onReload  "></Button>
             <Button text="Show" press="onShowMe"></Button>
+            <Button text="Flip Flop" press="onFlip"></Button>
         </form:content>
 
-
+ 
     </form:SimpleForm>
 </mvc:View>  
