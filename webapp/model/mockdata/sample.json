@@ -1,0 +1,22 @@
+{
+  "empStr": {
+    "empId": 5000,
+    "empName": "kocju",
+    "salary": 6500,
+    "currency": "EUR"
+  },
+  "empTab": [
+    {
+      "empId": 9000,
+      "empName": "hiki",
+      "salary": 3500,
+      "currency": "USD"
+    },
+    {
+      "empId": 9001,
+      "empName": "tunku",
+      "salary": 4500,
+      "currency": "USD"
+    }
+  ]
+}

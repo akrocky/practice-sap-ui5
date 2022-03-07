@@ -7,34 +7,15 @@ sap.ui.define([
         onInit:function (params) {
            this.oView=this.getView()
            //create model obeject 
-           var oModel= new sap.ui.model.json.JSONModel()
-           //load or set data to model
-           oModel.setData({
-            "empStr":{
-                 "empId":5000,
-                 "empName":"kocju",
-                 "salary":6500,
-                 "currency":"EUR"
-            } ,
-            "empTab":[
-                   {
-                    "empId":9000,
-                    "empName":"hiki",
-                    "salary":3500,
-                    "currency":"USD"
-                   },{
-                    "empId":9001,
-                    "empName":"tunku",
-                    "salary":4500,
-                    "currency":"USD"
-                   }
-            ]  
-           })
+           
            //make the model aware to the application
            sap.ui.getCore().setModel(oModel);
            //binding syntax
            var Osalary=this.getView().byId("idEmpSal")
            Osalary.bindValue('/empStr/salary')
+           var OCurr=this.getView().byId("idCurr")
+           OCurr.bindProperty('value','/empStr/currency')
+ 
 
         },
         onBtnClick:function () {
