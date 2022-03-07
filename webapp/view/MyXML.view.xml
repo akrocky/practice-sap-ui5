@@ -12,9 +12,9 @@ text="Click Me"
         </form:title>
         <form:content>
             <Label text="Emp Id"></Label>
-            <Input id="idEmpId" width="20%"></Input>
+            <Input id="idEmpId" width="20%" value="{/empStr/empId}"></Input>
             <Label text="Emp Name"></Label>
-            <Input id="idEmpName" width="40%"></Input>
+            <Input id="idEmpName" width="40%" value="{path: '/empStr/empName'}"></Input>
             <Label text="Salary"></Label>
             <Input id="idEmpSal" width="30%"></Input>
             <Label text="Currency"></Label>
