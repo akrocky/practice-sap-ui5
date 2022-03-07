@@ -15,6 +15,8 @@ sap.ui.define([
            //second model
            var oMode2=models.createJSONModel("model/mockdata/dataset.json")
            sap.ui.getCore().setModel(oMode2,"got");
+           var oXmlModel=models.createXMLModel("model/mockdata/mydemo.xml")
+           sap.ui.getCore().setModel(oXmlModel);
            //binding syntax
            var Osalary=this.getView().byId("idEmpSal")
            Osalary.bindValue('/empStr/salary')

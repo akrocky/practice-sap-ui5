@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<data>
+<empStr>
+    <empId>7000</empId>
+    <empName>Rony</empName>
+    <salary>7800</salary>
+    <currency>USD</currency>
+</empStr>
+<empTable>
+    <row>
+        <empId>7001</empId>
+        <empName>mask</empName>
+        <salary>13134</salary>
+        <currency>EURO</currency>   
+    </row>
+    <row>
+        <empId>7002</empId>
+        <empName>jeff bezoz </empName>
+        <salary>6900</salary>
+        <currency>USD</currency>   
+    </row>
+    <row>
+        <empId>7003</empId>
+        <empName>Steve</empName>
+        <salary>244</salary>
+        <currency>USD</currency>   
+    </row>
+    <row>
+        <empId>7004</empId>
+        <empName>HHK</empName>
+        <salary>7003</salary>
+        <currency>Euro</currency>   
+    </row>
+</empTable>
+
+</data>

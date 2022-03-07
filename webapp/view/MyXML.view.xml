@@ -12,13 +12,13 @@ text="Click Me"
         </form:title>
         <form:content>
             <Label text="Emp Id"></Label>
-            <Input id="idEmpId" width="20%" value="{/empStr/empId}" enabled="{/empStr/hunk}"></Input>
+            <Input id="idEmpId" width="20%" value="{/empStr/empId}" ></Input>
             <Label text="Emp Name"></Label>
-            <Input id="idEmpName" width="40%" value="{path: 'got>/empStr/empName'}" enabled="{/empStr/hunk}"></Input>
+            <Input id="idEmpName" width="40%" value="{path: '/empStr/empName'}" ></Input>
             <Label text="Salary"></Label>
-            <Input id="idEmpSal" width="30%" enabled="{/empStr/hunk}"></Input>
+            <Input id="idEmpSal" width="30%" ></Input>
             <Label text="Currency"></Label>
-            <Input id="idCurr" width="15%" enabled="{/empStr/hunk}"></Input>
+            <Input id="idCurr" width="15%" ></Input>
             <Label></Label>
             <Button text="reload" press="onReload  "></Button>
             <Button text="Show" press="onShowMe"></Button>

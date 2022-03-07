@@ -1,6 +1,7 @@
 sap.ui.define([
-'sap/ui/model/json/JSONModel'	
-], function(JSONModel) {
+'sap/ui/model/json/JSONModel',
+'sap/ui/model/xml/XMLModel'	
+], function(JSONModel,XMLModel) {
 	"use strict";
        return {
         createJSONModel:function (sFilePath) {
@@ -10,7 +11,12 @@ sap.ui.define([
             oModel.loadData(sFilePath)
             return oModel;
          },
-         createXMLModel:function () {
+         createXMLModel:function (sFilePath) {
+              var oModel= new XMLModel()
+              //load or set data to model
+              // oModel.setData()    n
+              oModel.loadData(sFilePath)
+              return oModel;
              
          },
          createResourceModel:function () {
