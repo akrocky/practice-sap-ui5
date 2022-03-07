@@ -14,7 +14,7 @@ text="Click Me"
             <Label text="Emp Id"></Label>
             <Input id="idEmpId" width="20%" value="{/empStr/empId}" enabled="{/empStr/hunk}"></Input>
             <Label text="Emp Name"></Label>
-            <Input id="idEmpName" width="40%" value="{path: '/empStr/empName'}" enabled="{/empStr/hunk}"></Input>
+            <Input id="idEmpName" width="40%" value="{path: 'got>/empStr/empName'}" enabled="{/empStr/hunk}"></Input>
             <Label text="Salary"></Label>
             <Input id="idEmpSal" width="30%" enabled="{/empStr/hunk}"></Input>
             <Label text="Currency"></Label>
