@@ -18,10 +18,10 @@ sap.ui.define([
         //    var oXmlModel=models.createXMLModel("model/mockdata/mydemo.xml")
         //    sap.ui.getCore().setModel(oXmlModel);
            //binding syntax
-           var Osalary=this.getView().byId("idEmpSal")
-           Osalary.bindValue('/empStr/salary')
-           var OCurr=this.getView().byId("idCurr")
-           OCurr.bindProperty('value','/empStr/currency')
+        //    var Osalary=this.getView().byId("idEmpSal")
+        //    Osalary.bindValue('/empStr/salary')
+        //    var OCurr=this.getView().byId("idCurr")
+        //    OCurr.bindProperty('value','/empStr/currency')
  
 
         },
@@ -52,6 +52,20 @@ sap.ui.define([
            sap.ui.getCore().setModel(oGOTModel)
            sap.ui.getCore().setModel(oModel,"got")
 
+        },
+        onRowSelect:function (oEvent) {
+            // step what is the row was selected by user
+           
+             var oRowContext=oEvent.getParameter("rowContext");
+             
+
+            //step2 adress element
+            var sPath=oRowContext.getPath()
+            //step3 get object simple form
+            var oSimpleForm= this.getView().byId("idSimple")
+            
+            //step 4 perform element binding
+            oSimpleForm.bindElement(sPath); 
         }
     })
     

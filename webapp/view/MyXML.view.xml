@@ -4,21 +4,80 @@
 <Button id="idBtn" press="onBtnClick" 
 text="Click Me"
  icon="sap-icon://home"/> -->
+ <t:Table rows="{/empTab}" visibleRowCount="4" selectionMode="Single" rowSelectionChange="onRowSelect" >
+ <t:columns>
+     <t:Column> 
+         <t:label>
+            <Label text="EmpId"></Label> 
+         </t:label>
+         <t:template>
+             <Text text="{empId}"></Text> 
+         </t:template>
+     </t:Column>
+     <t:Column>
+         <t:label>
+            <Label text="EmpName"></Label> 
+         </t:label>
+         <t:template>
+             <Input value="{empName}"></Input> 
+         </t:template>
+     </t:Column>
+     <t:Column>
+         <t:label>
+            <Label text="Salary"></Label> 
+         </t:label>
+         <t:template>
+             <Text text="{salary} {currency}"></Text> 
+         </t:template>
+     </t:Column>
+     
+     <t:Column>
+         <t:label>
+            <Label text="Smoker"></Label> 
+         </t:label>
+         <t:template>
+             <CheckBox selected="{smoker}"></CheckBox> 
+         </t:template>
+     </t:Column>
+     <t:Column>
+         <t:label>
+            <Label text="Gender"></Label> 
+         </t:label>
+         <t:template>
+            <Image src="{gender}" height="40px" width="40px"></Image>
+         </t:template>
+     </t:Column>
+     <t:Column>
+         <t:label>
+            <Label text="rating"></Label> 
+         </t:label>
+         <t:template>
+             <RatingIndicator value="{rating}"></RatingIndicator> 
+         </t:template>
+     </t:Column>
+     
+ </t:columns>
+ <t:rows>
+     <t:Row>
+           
+     </t:Row>
+ </t:rows>
+</t:Table>
 
 
-    <form:SimpleForm editable="true">
+    <form:SimpleForm editable="true" id="idSimple">
         <form:title>
             <core:Title icon="sap-icon://customer" text="Employee Details"></core:Title>
         </form:title>
         <form:content>
             <Label text="Emp Id"></Label>
-            <Input id="idEmpId" width="20%" value="{/empStr/empId}" ></Input>
+            <Input id="idEmpId" width="20%" value="{empId}" ></Input>
             <Label text="Emp Name"></Label>
-            <Input id="idEmpName" width="40%" value="{path: '/empStr/empName'}" ></Input>
+            <Input id="idEmpName" width="40%" value="{path: 'empName'}" ></Input>
             <Label text="Salary"></Label>
-            <Input id="idEmpSal" width="30%" ></Input>
+            <Input id="idEmpSal" width="30%" value="{salary}"  enabled="{=${empName}==='anubhab'?false:true}" > </Input>
             <Label text="Currency"></Label>
-            <Input id="idCurr" width="15%" ></Input>
+            <Input id="idCurr" value="{currency}" width="15%" ></Input>
             <Label></Label>
             <Button text="reload" press="onReload  "></Button>
             <Button text="Show" press="onShowMe"></Button>
@@ -27,63 +86,5 @@ text="Click Me"
 
  
     </form:SimpleForm>
-    <t:Table rows="{/empTab}">
-        <t:columns>
-            <t:Column> 
-                <t:label>
-                   <Label text="EmpId"></Label> 
-                </t:label>
-                <t:template>
-                    <Text text="{empId}"></Text> 
-                </t:template>
-            </t:Column>
-            <t:Column>
-                <t:label>
-                   <Label text="EmpName"></Label> 
-                </t:label>
-                <t:template>
-                    <Input value="{empName}"></Input> 
-                </t:template>
-            </t:Column>
-            <t:Column>
-                <t:label>
-                   <Label text="Salary"></Label> 
-                </t:label>
-                <t:template>
-                    <Text text="{salary} {currency}"></Text> 
-                </t:template>
-            </t:Column>
-            
-            <t:Column>
-                <t:label>
-                   <Label text="Smoker"></Label> 
-                </t:label>
-                <t:template>
-                    <CheckBox selected="{smoker}"></CheckBox> 
-                </t:template>
-            </t:Column>
-            <t:Column>
-                <t:label>
-                   <Label text="Gender"></Label> 
-                </t:label>
-                <t:template>
-                   <Image src="{gender}" height="40px" width="40px"></Image>
-                </t:template>
-            </t:Column>
-            <t:Column>
-                <t:label>
-                   <Label text="rating"></Label> 
-                </t:label>
-                <t:template>
-                    <RatingIndicator value="{rating}"></RatingIndicator> 
-                </t:template>
-            </t:Column>
-            
-        </t:columns>
-        <t:rows>
-            <t:Row>
-                  
-            </t:Row>
-        </t:rows>
-    </t:Table>
+   
 </mvc:View>  
