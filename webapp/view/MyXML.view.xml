@@ -1,4 +1,4 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m" controllerName="chip.controller.MyXML" xmlns:mvc="sap.ui.core.mvc">
+<mvc:View xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m" xmlns:t="sap.ui.table" controllerName="chip.controller.MyXML" xmlns:mvc="sap.ui.core.mvc">
 
     <!-- <Input id="idInp" />
 <Button id="idBtn" press="onBtnClick" 
@@ -27,4 +27,63 @@ text="Click Me"
 
  
     </form:SimpleForm>
+    <t:Table rows="{/empTab}">
+        <t:columns>
+            <t:Column> 
+                <t:label>
+                   <Label text="EmpId"></Label> 
+                </t:label>
+                <t:template>
+                    <Text text="{empId}"></Text> 
+                </t:template>
+            </t:Column>
+            <t:Column>
+                <t:label>
+                   <Label text="EmpName"></Label> 
+                </t:label>
+                <t:template>
+                    <Input value="{empName}"></Input> 
+                </t:template>
+            </t:Column>
+            <t:Column>
+                <t:label>
+                   <Label text="Salary"></Label> 
+                </t:label>
+                <t:template>
+                    <Text text="{salary} {currency}"></Text> 
+                </t:template>
+            </t:Column>
+            
+            <t:Column>
+                <t:label>
+                   <Label text="Smoker"></Label> 
+                </t:label>
+                <t:template>
+                    <CheckBox selected="{smoker}"></CheckBox> 
+                </t:template>
+            </t:Column>
+            <t:Column>
+                <t:label>
+                   <Label text="Gender"></Label> 
+                </t:label>
+                <t:template>
+                   <Image src="{gender}" height="40px" width="40px"></Image>
+                </t:template>
+            </t:Column>
+            <t:Column>
+                <t:label>
+                   <Label text="rating"></Label> 
+                </t:label>
+                <t:template>
+                    <RatingIndicator value="{rating}"></RatingIndicator> 
+                </t:template>
+            </t:Column>
+            
+        </t:columns>
+        <t:rows>
+            <t:Row>
+                  
+            </t:Row>
+        </t:rows>
+    </t:Table>
 </mvc:View>  

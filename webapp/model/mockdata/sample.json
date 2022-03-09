@@ -11,37 +11,61 @@
       "empId": 9000,
       "empName": "hiki",
       "salary": 3500,
-      "currency": "USD"
+      "currency": "USD",
+      "smoker": true,
+      "gender": "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_female2-512.png",
+      "mStat": "M",
+      "rating": 2
     },
     {
       "empId": 9001,
       "empName": "tunku",
       "salary": 4500,
-      "currency": "USD"
+      "currency": "USD",
+      "smoker": false,
+      "gender": "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_female2-512.png",
+      "mStat": "S",
+      "rating": 5
     },
     {
       "empId": 9002,
       "empName": "tcvcsv",
       "salary": 4100,
-      "currency": "EUR"
+      "currency": "EUR",
+      "smoker": false,
+      "gender": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_o_UXxC0Hm0Ge1g5RH9GtppPV9fFTB7Jxrg&usqp=CAU",
+      "mStat": "M",
+      "rating": 2
     },
     {
       "empId": 9003,
       "empName": "ula",
       "salary": 4200,
-      "currency": "USD"
+      "currency": "USD",
+      "smoker": false,
+      "gender": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_o_UXxC0Hm0Ge1g5RH9GtppPV9fFTB7Jxrg&usqp=CAU",
+      "mStat": "M",
+      "rating": 2
     },
     {
       "empId": 9004,
       "empName": "hicha mar",
       "salary": 4200,
-      "currency": "EUR"
+      "currency": "EUR",
+      "smoker": false,
+      "gender": "https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_female2-512.png",
+      "mStat": "M",
+      "rating": 2
     },
     {
       "empId": 9005,
       "empName": "kallu",
       "salary": 3900,
-      "currency": "USD"
+      "currency": "USD",
+      "smoker": true,
+      "gender": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_o_UXxC0Hm0Ge1g5RH9GtppPV9fFTB7Jxrg&usqp=CAU",
+      "mStat": "M",
+      "rating": 4
     }
   ]
 }
