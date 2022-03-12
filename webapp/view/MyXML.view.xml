@@ -8,7 +8,7 @@ text="Click Me"
  <t:columns>
      <t:Column> 
          <t:label>
-            <Label text="EmpId"></Label> 
+            <Label text="{i18n>XLBL_EMPID}"></Label> 
          </t:label>
          <t:template>
              <Text text="{empId}"></Text> 
@@ -16,24 +16,27 @@ text="Click Me"
      </t:Column>
      <t:Column>
          <t:label>
-            <Label text="EmpName"></Label> 
+            <Label text="{i18n>XLBL_EMPNAME}"></Label> 
          </t:label>
          <t:template>
-             <Input value="{empName}"></Input> 
+             <Input value="{path:'empName',formatter:'.formatter.myFormatter'}"></Input> 
          </t:template>
      </t:Column>
      <t:Column>
          <t:label>
-            <Label text="Salary"></Label> 
+            <Label text="{i18n>XLBL_SAL}"></Label> 
          </t:label>
          <t:template>
-             <Text text="{salary} {currency}"></Text> 
+             <Text text="{
+        parts:[{path:'salary'},{path:'currency'}],
+          formatter:'.formatter.formatCurrency'  
+    }"></Text> 
          </t:template>
      </t:Column>
      
      <t:Column>
          <t:label>
-            <Label text="Smoker"></Label> 
+            <Label text="{i18n>XLBL_SMK}"></Label> 
          </t:label>
          <t:template>
              <CheckBox selected="{smoker}"></CheckBox> 
@@ -49,7 +52,7 @@ text="Click Me"
      </t:Column>
      <t:Column>
          <t:label>
-            <Label text="rating"></Label> 
+            <Label text="{i18n>XLBL_RATE}"></Label> 
          </t:label>
          <t:template>
              <RatingIndicator value="{rating}"></RatingIndicator> 
@@ -67,21 +70,21 @@ text="Click Me"
 
     <form:SimpleForm editable="true" id="idSimple">
         <form:title>
-            <core:Title icon="sap-icon://customer" text="Employee Details"></core:Title>
+            <core:Title icon="sap-icon://customer" text="{i18n>XTIT_DETAIL}"></core:Title>
         </form:title>
         <form:content>
-            <Label text="Emp Id"></Label>
+            <Label text="{i18n>XLBL_EMPID}"></Label>
             <Input id="idEmpId" width="20%" value="{empId}" ></Input>
-            <Label text="Emp Name"></Label>
+            <Label text="{i18n>XLBL_EMPNAME}"></Label>
             <Input id="idEmpName" width="40%" value="{path: 'empName'}" ></Input>
-            <Label text="Salary"></Label>
+            <Label text="{i18n>XLBL_SAL}"></Label>
             <Input id="idEmpSal" width="30%" value="{salary}"  enabled="{=${empName}==='anubhab'?false:true}" > </Input>
-            <Label text="Currency"></Label>
+            <Label text="{i18n>XLBL_CURR}"></Label>
             <Input id="idCurr" value="{currency}" width="15%" ></Input>
             <Label></Label>
-            <Button text="reload" press="onReload  "></Button>
-            <Button text="Show" press="onShowMe"></Button>
-            <Button text="Flip Flop" press="onFlip"></Button>
+            <Button text="{i18n>XBUT_RELOAD}" press="onReload  "></Button>
+            <Button text="{i18n>XBUT_SHOW}" press="onShowMe"></Button>
+            <Button text="{i18n>XBUT_FLIP}" press="onFlip"></Button>
         </form:content>
 
  

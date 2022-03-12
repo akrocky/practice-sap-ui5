@@ -1,10 +1,11 @@
 sap.ui.define([
     'sap/ui/core/mvc/Controller',
-    'chip/model/models'
-], function(Controlle,models) {
+    'chip/model/models',
+    'chip/util/lifeSaver'
+], function(Controlle,models,lifeSaver) {
     'use strict';
     Controlle.extend  ("chip.controller.MyXML",{
-        
+        formatter:  lifeSaver,
         onInit:function (params) {
            this.oView=this.getView()
            //create model obeject 
@@ -15,6 +16,9 @@ sap.ui.define([
            //second model
            var oMode2=models.createJSONModel("model/mockdata/dataset.json")
            sap.ui.getCore().setModel(oMode2,"got");
+           var oModelResource=models.createResourceModel();
+           sap.ui.getCore().setModel(oModelResource,"i18n");
+               
         //    var oXmlModel=models.createXMLModel("model/mockdata/mydemo.xml")
         //    sap.ui.getCore().setModel(oXmlModel);
            //binding syntax
@@ -22,7 +26,7 @@ sap.ui.define([
         //    Osalary.bindValue('/empStr/salary')
         //    var OCurr=this.getView().byId("idCurr")
         //    OCurr.bindProperty('value','/empStr/currency')
- 
+  
 
         },
         onBtnClick:function () {
@@ -54,19 +58,29 @@ sap.ui.define([
 
         },
         onRowSelect:function (oEvent) {
+         this. useingElementBinding(oEvent)  
+        },
+        useingElementBinding: function (oEvent) {
             // step what is the row was selected by user
-           
-             var oRowContext=oEvent.getParameter("rowContext");
-             
-
+               
+            var oRowContext=oEvent.getParameter("rowContext");
+                 
+    
             //step2 adress element
             var sPath=oRowContext.getPath()
             //step3 get object simple form
             var oSimpleForm= this.getView().byId("idSimple")
             
             //step 4 perform element binding
-            oSimpleForm.bindElement(sPath); 
+            oSimpleForm.bindElement(sPath);  
+        },
+        myFormatter:function (input) {
+            return input && input.toUpperCase();
+            // if (input) {
+            //   return  input.toUpperCase() 
+            // }
         }
     })
+    
     
 });
